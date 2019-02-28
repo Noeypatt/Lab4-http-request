@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Github from './Github';
+import Grid from '@material-ui/core/Grid';
+import Wather from './Weather';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Grid container spacing={24}>
+          <Grid item xs={3}>
+              <Github/>
+          </Grid>
+
+          <Grid item xs={3}>
+            <Wather/>
+          </Grid>
+
+        </Grid>
+        
       </div>
     );
   }
